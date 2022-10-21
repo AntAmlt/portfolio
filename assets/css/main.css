@@ -171,6 +171,11 @@ a {
     padding: 10px;
 }
 
+.btn-small {
+    font-size: small;
+    padding: 10px 5px;
+}
+
 .shadow-btn:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #2a2d35;
@@ -194,13 +199,59 @@ a {
 }
 
 .devicon {
-    font-size: xx-large;
+    font-size: 2rem;
+}
+
+svg {
+    width: 2rem;
+    
 }
 
 .icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #a5a5a5;
+    border-radius: 15px;
+    padding: 20px;
+    border: 3px #a5a5a5 solid;
+    transition: 0.2s all ease;
+}
+
+.project-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.project-item:hover {
+    /* border: 3px solid var(--blue); */
+    box-shadow: #26a8da 0px 7px 29px 0px;
+}
+
+.project-miniature {
+    width: 45%;
+}
+
+.project-miniature img {
+    width: 100%;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.project-content {
+    width: 55%;
+}
+
+.project-langages ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -347,6 +398,16 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     align-items: center;
     justify-content: center;
+}
+
+.project-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-langages {
+    margin: 10px 0 15px 0;
 }
 
 
