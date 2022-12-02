@@ -12,7 +12,6 @@
     --dark: #1d2028;
 }
 
-
 /* +++ PAGE CONFIGURATION +++ */
 
 html {
@@ -293,6 +292,10 @@ section {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.navigation nav {
+    justify-self: center;
 }
 
 @media screen and (max-width: 1024px) {
