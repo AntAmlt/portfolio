@@ -125,6 +125,10 @@ h2:after {
     width: 100px;
 }
 
+a {
+    text-decoration: none;
+}
+
 #skills h3::before, #skills h3::after {
     content: '-';
     color: var(--blue);
@@ -139,14 +143,32 @@ h2:after {
     left: 10px;
 }
 
-a {
-    text-decoration: none;
+#modal-header span {
+    font-size: xx-large;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* .brand {
-    font-size: 4rem;
-    animation: blue-nuances 5s infinite reverse;
-} */
+.project-modal-subtitle {
+    font-size: x-large;
+    font-weight: 900;
+    color: var(--blue);
+}
+
+.project-content-element-title {
+    font-size: larger;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    display: inline-block;
+}
+
+.project-modal-technology {
+    border: 1px solid var(--light-blue);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--light-blue);
+    color: var(--dark);
+}
 
 .header-content p {
     line-height: 1.5;
@@ -229,12 +251,44 @@ svg {
 .project-item {
     display: flex;
     align-items: center;
-    gap: 20px;
     background-color: #a5a5a5;
     border-radius: 15px;
-    padding: 20px;
-    border: 3px #a5a5a5 solid;
     transition: 0.2s all ease;
+    border: 2px solid #a5a5a5;
+    position: relative;
+    transition: 0.2s all ease-in;
+}
+
+.project-item img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.project-info {
+    background-color: rgba(0, 0, 0, 0.678);
+    position: absolute;
+    bottom: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-info button {
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 5px 10px;
+    border-radius: 33px;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+
+.project-info button:hover {
+    background-color: transparent;
+    color: var(--blue);
 }
 
 .project-item:not(:last-child) {
@@ -244,27 +298,6 @@ svg {
 .project-item:hover {
     /* border: 3px solid var(--blue); */
     box-shadow: #26a8da 0px 7px 29px 0px;
-}
-
-.project-miniature {
-    width: 45%;
-}
-
-.project-miniature img {
-    width: 100%;
-    height: max-content;
-    border-radius: 5px;
-}
-
-.project-content {
-    width: 55%;
-}
-
-.project-langages ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 
@@ -303,6 +336,7 @@ section {
 .navigation {
     position: fixed;
     height: 100vh;
+    z-index: 1;
     background-color: var(--dark);
     /* Computer size */
     width: 220px;
@@ -429,17 +463,6 @@ section {
     gap: 40px 40px; 
 }
 
-.project-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.project-langages {
-    margin: 10px 0 15px 0;
-}
-
-
 /*  +++ ANIMATIONS +++ */
 
 a {
@@ -468,4 +491,84 @@ a {
     100% {
         box-shadow: #26a8da 0px 7px 29px 0px;
     } 
+}
+
+#project-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin: 0;
+    left: 50px;
+    top: 50px;
+    width: calc(100% - 100px); /* Full width */
+    height: calc(100% - 100px); /* Full height */
+    border: 3px solid #a5a5a5;
+    background-color: var(--black);
+    border-radius: 15px;
+    border-radius: 15px;
+}
+
+#project-modal button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.25s all ease-in;
+}
+
+#project-modal button:hover {
+    transform: rotate(180deg);
+}
+
+#modal-header {
+    text-align: center;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
+    url("../img/projects/tutorat.png");
+    background-size: contain;
+    background-repeat: no-repeat; */
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.modal-content {
+    background-color: var(--dark);
+    padding: 20px;
+    height: 50%;
+    overflow: auto; /* Enable scroll if needed */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.project-content-element {
+    margin-bottom: 20px;
+}
+
+#project-modal-technologies {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#project-modal-links {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#project-modal-links > a {
+    border: 1px solid var(--blue);
+    color: white;
+    background-color: var(--blue);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
