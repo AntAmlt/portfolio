@@ -125,6 +125,20 @@ h2:after {
     width: 100px;
 }
 
+#skills h3::before, #skills h3::after {
+    content: '-';
+    color: var(--blue);
+    position: relative;
+}
+
+#skills h3::before {
+    left: -10px;
+}
+
+#skills h3::after {
+    left: 10px;
+}
+
 a {
     text-decoration: none;
 }
@@ -278,6 +292,10 @@ section {
     justify-content: center;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 .full-screen {
     min-height: 100vh;
 }
@@ -375,7 +393,7 @@ section {
 }
 
 .event-even {
-    background-color: var(--blue);
+    background-color: #f1f1f1;
 }
 
 .event-even .light-blue {
@@ -394,13 +412,21 @@ section {
     z-index: 1;
 }
 
-.icons-grid {
-    display: grid;
-    gap: 30px;
-    margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+.skills-category {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.icons-grid {
+    width: 90%;
+    margin: 15px auto 0 auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, 100px); 
+    grid-template-rows: 100px; 
+    gap: 40px 40px; 
 }
 
 .project-actions {
@@ -437,7 +463,7 @@ a {
         box-shadow: #26a8da 0px 7px 29px 0px;
     } 
     50% {
-        box-shadow: #26a8da 0px 6px 27px 2px;
+        box-shadow: #26a8da 0px 14px 58px 2px;
     }
     100% {
         box-shadow: #26a8da 0px 7px 29px 0px;
