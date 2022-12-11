@@ -279,25 +279,34 @@
             </header>
 
             <div class="section-content">
-                <div class="project-item">
+                <div class="project-item" onclick="openProject(0)">
                     <img src="assets/img/projects/bobbyzburger.png" alt="">
                     <div class="project-info">
-                        <h3>Bobby Z Burgers <small>(Juillet 2022)</small></h3>
-                        <p>Site web d'une marque fictive tirée de la bande dessinée "Il faut flinguer Ramirez".</p>
+                        <div class="project-info-content">
+                            <h3>Bobby Z Burgers <small>(Juillet 2022)</small></h3>
+                            <p>Site web d'une marque fictive tirée de la bande dessinée "Il faut flinguer Ramirez".</p>
+                        </div>
+                        <button onclick="openProject(0)">Voir plus</button>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" onclick="openProject(1)">
                     <img src="assets/img/projects/tutorat.png" alt="">
                     <div class="project-info">
-                        <h3>Tutorat <small>(Avril 2022)</small></h3>
-                        <p>Application de tutorat conçue dans le cadre d'un projet d'études.</p>
+                        <div class="project-info-content">
+                            <h3>Tutorat <small>(Avril 2022)</small></h3>
+                            <p>Application de tutorat conçue dans le cadre d'un projet d'études.</p>
+                        </div>
+                        <button onclick="openProject(1)">Voir plus</button>
                     </div>
                 </div>
-                <div class="project-item">
+                <div class="project-item" onclick="openProject(2)">
                     <img src="assets/img/projects/learningup.png" alt="">
                     <div class="project-info">
-                        <h3>Learning'Up <small>(Octobre 2021)</small></h3>
-                        <p>Site web de la startup fictive Learning'Up réalisé dans le cadre d'un projet d'études.</p>
+                        <div class="project-info-content">
+                            <h3>Learning'Up <small>(Octobre 2021)</small></h3>
+                            <p>Site web de la startup fictive Learning'Up réalisé dans le cadre d'un projet d'études.</p>
+                        </div>
+                        <button onclick="openProject(2)">Voir plus</button>
                     </div>
                 </div>
             </div>
@@ -307,6 +316,31 @@
             © Antoine Ameloot 2022
         </footer>
     </main>
+
+
+    <div id="project-modal">
+        <button onclick="closeProject()"><i class="fas fa-close fa-xl"></i></button>
+        <div id="modal-header">
+            <span style="display: block;" id="project-modal-title">Project Title</span>
+            <small id="project-modal-date">Juillet 2022</small>
+            <div id="project-modal-links">
+                <a href="#">Démonstration</a>
+                <a href="#">Code source</a>
+            </div>
+        </div>
+        <div class="modal-content">
+            <div class="project-content-element">
+                <span class="project-content-element-title">Description</span>
+                <p id="project-modal-description"></p>
+            </div>
+            <div class="project-content-element">
+                <span class="project-content-element-title">Technologies utilisées</span>
+                <div id="project-modal-technologies">
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
