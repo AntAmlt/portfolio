@@ -60,6 +60,9 @@ function openProject(projectIndex) {
         var project = projects[projectIndex];
         headerProjectModal.style.background = `linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45)),
         url(${project.picture})`;
+        headerProjectModal.style.backgroundSize = "contain";
+        headerProjectModal.style.backgroundRepeat = "no-repeat";
+        headerProjectModal.style.backgroundPosition = "center";
         titleProjectModal.innerText = project.title;
         dateProjectModal.innerText = project.date;
         descriptionProjectModal.innerHTML = project.longDescription;
