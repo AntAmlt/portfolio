@@ -257,6 +257,7 @@ svg {
     border: 2px solid #a5a5a5;
     position: relative;
     transition: 0.2s all ease-in;
+    cursor: pointer;
 }
 
 .project-item img {
@@ -355,11 +356,12 @@ section {
         display: none;
     }
     body > :not(.navigation) {
-        margin: 0 20px;
+        margin: 0 0px;
     }
     section {
         margin: 30px 0 75px 0;
         width: 100%;
+        border-radius: 0;
     }
 }
 
@@ -457,9 +459,13 @@ section {
 .icons-grid {
     width: 90%;
     margin: 15px auto 0 auto;
-    display: grid; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* display: grid; 
     grid-template-columns: repeat(auto-fill, 100px); 
-    grid-template-rows: 100px; 
+    grid-template-rows: 100px;  */
     gap: 40px 40px; 
 }
 
@@ -506,7 +512,31 @@ a {
     background-color: var(--black);
     border-radius: 15px;
     border-radius: 15px;
-}
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+        display: none;
+        top: -300px; 
+        opacity: 0;
+    }
+    to {top: 50px; opacity: 1}
+  }
+
+  @keyframes animatebottom {
+    from {
+        top: 50px; 
+        opacity: 1;
+    } to {
+        top: -300px; 
+        opacity: 0;  
+        display: "none";
+    }
+  }
+
 
 #project-modal button {
     position: absolute;
