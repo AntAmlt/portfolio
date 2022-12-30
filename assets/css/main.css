@@ -261,14 +261,11 @@ svg {
 }
 
 .project-item img {
-    border-radius: 15px;
     width: 100%;
 }
 
 .project-info {
     background-color: rgba(0, 0, 0, 0.678);
-    position: absolute;
-    bottom: 0;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 10px;
@@ -349,20 +346,6 @@ section {
 
 .navigation nav {
     justify-self: center;
-}
-
-@media screen and (max-width: 1024px) {
-    .navigation {
-        display: none;
-    }
-    body > :not(.navigation) {
-        margin: 0 0px;
-    }
-    section {
-        margin: 30px 0 75px 0;
-        width: 100%;
-        border-radius: 0;
-    }
 }
 
 .navigation nav {
@@ -463,9 +446,6 @@ section {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* display: grid; 
-    grid-template-columns: repeat(auto-fill, 100px); 
-    grid-template-rows: 100px;  */
     gap: 40px 40px; 
 }
 
@@ -513,7 +493,7 @@ a {
     border-radius: 15px;
     border-radius: 15px;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
   }
   
   /* Add Animation */

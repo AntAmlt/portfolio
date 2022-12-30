@@ -1,0 +1,11 @@
+@media screen and (min-width: 1024px) {
+
+    .project-info {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .project-item img {
+        border-radius: 15px;
+    }
+}
