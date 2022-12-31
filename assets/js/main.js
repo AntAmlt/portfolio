@@ -101,7 +101,6 @@ var technologiesProjectModal = document.getElementById("project-modal-technologi
 var linksProjectModal = document.getElementById("project-modal-links");
 
 
-
 /**
  * Open a modal with project informations since its index.
  * @param {*} projectIndex The project index
@@ -166,4 +165,26 @@ function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
+}
+
+function openNavigation() {
+    const navigation = document.getElementsByClassName('navigation')[0];
+    const mobileButton = document.getElementsByClassName('mobile-button')[0];
+    if (navigation.style.display == 'flex') {
+        navigation.style.display = 'none';
+        mobileButton.classList.add('fa-bars');
+        mobileButton.classList.remove('fa-xmark');
+    }
+    else {
+        navigation.style.display = 'flex';
+        mobileButton.classList.remove('fa-bars');
+        mobileButton.classList.add('fa-xmark');
+    }
+}
+
+function goTo() {
+    if (window.innerWidth < 1024) {
+        openNavigation();
+    }
+    closeProject();
 }
