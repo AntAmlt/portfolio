@@ -8,4 +8,8 @@
     .project-item img {
         border-radius: 15px;
     }
+
+    .mobile-button {
+        display: none;
+    }
 }
