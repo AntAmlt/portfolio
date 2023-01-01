@@ -11,5 +11,7 @@
 
     .mobile-button {
         display: none;
+        position: fixed;
+        opacity: 0;
     }
 }
