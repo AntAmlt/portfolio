@@ -12,11 +12,11 @@ var projects = [
         "links": [
             {
                 "title": "Démonstration",
-                "link": "https://github.com" 
+                "link": "https://antamlt.github.io/bobbyz-burger/" 
             },
             {
                 "title": "Code source",
-                "link": "https://gitlab.com" 
+                "link": "https://github.com/AntAmlt/bobbyz-burger" 
             }
         ]
     },
@@ -39,7 +39,7 @@ var projects = [
         "links": [
             {
                 "title": "Démonstration",
-                "link": "https://github.com" 
+                "link": "https://learningup.antoineameloot.repl.co/index.html" 
             }
         ]
     }
